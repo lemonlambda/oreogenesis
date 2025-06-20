@@ -71,10 +71,12 @@ function new_bio_processor(trait, additional_fields)
     },
     allow_copy_paste = true,
     crafting_speed = 0.5,
-    crafting_categories = additional_fields.crafting_categories or {"bio-processor"},
-    energy_usage = "1000QW",
+    crafting_categories = additional_fields.crafting_categories or { "bio-processor" },
+    energy_usage = "100kW",
     energy_source = {
-      type = "void",
+      type = "electric",
+      buffer_capacity = "500kJ",
+      usage_priority = "secondary-input",
     },
     fluid_boxes = {
       {
