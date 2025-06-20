@@ -3,6 +3,7 @@ local organic_processed_data = {
   name = "organic-processed-data",
   icon = "__Krastorio2Assets__/icons/cards/matter-research-data.png",
   stack_size = 100,
+  durability = 10,
 }
 
 data:extend{
