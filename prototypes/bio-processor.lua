@@ -45,7 +45,7 @@ function new_bio_processor(trait, additional_fields)
                 width_in_frames = 8,
                 height_in_frames = 8,
               }},
-              size = { 500, 500 },
+              size = {500, 500},
               scale = 0.183,
               draw_as_light = true,
               frame_count = 60,
@@ -56,7 +56,7 @@ function new_bio_processor(trait, additional_fields)
                 width_in_frames = 8,
                 height_in_frames = 8,
               }},
-              size = { 500, 500 },
+              size = {500, 500},
               scale = 0.183,
               frame_count = 60,
             },
@@ -71,7 +71,7 @@ function new_bio_processor(trait, additional_fields)
     },
     allow_copy_paste = true,
     crafting_speed = 0.5,
-    crafting_categories = additional_fields.crafting_categories or { "bio-processor" },
+    crafting_categories = additional_fields.crafting_categories or {"bio-processor"},
     energy_usage = "1000QW",
     energy_source = {
       type = "void",
@@ -80,14 +80,14 @@ function new_bio_processor(trait, additional_fields)
       {
         production_type = "input",
         volume = 1000,
-        pipe_connections = {{ flow_direction="input", direction = defines.direction.north, position = {0, -1} }},
-        secondary_draw_orders = { north = -1 }
+        pipe_connections = {{flow_direction = "input", direction = defines.direction.north, position = {0, -1}}},
+        secondary_draw_orders = {north = -1}
       },
       {
         production_type = "output",
         volume = 1000,
-        pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, 1} }},
-        secondary_draw_orders = { north = -1 }
+        pipe_connections = {{flow_direction = "output", direction = defines.direction.south, position = {0, 1}}},
+        secondary_draw_orders = {north = -1}
       },
     },
     collision_box = {
@@ -98,20 +98,20 @@ function new_bio_processor(trait, additional_fields)
     },
   }
 
-  data:extend{
+  data:extend {
     bio_processor
   }
 end
 
 new_bio_processor("blank", {})
-new_bio_processor("broken", { crafting_categories = { "bio-processor", "simple-unicelluar-organism-blank", }, })
-new_bio_processor("iron-producing", { crafting_categories = { "bio-processor", "simple-unicelluar-organism-iron-producing", }, })
-new_bio_processor("copper-producing", { crafting_categories = { "bio-processor", "simple-unicelluar-organism-copper-producing", }, })
+new_bio_processor("broken", {crafting_categories = {"bio-processor", "simple-unicelluar-organism-blank",},})
+new_bio_processor("iron-producing", {crafting_categories = {"bio-processor", "simple-unicelluar-organism-iron-producing",},})
+new_bio_processor("copper-producing", {crafting_categories = {"bio-processor", "simple-unicelluar-organism-copper-producing",},})
 
 local bio_processor_equipment_grid = {
   type = "equipment-grid",
   name = "bio-processor-equipment-grid",
-  equipment_categories = { "bio-processor-equipment" },
+  equipment_categories = {"bio-processor-equipment"},
   width = 5,
   height = 5
 }
@@ -125,6 +125,7 @@ local bio_processor_proxy_equipment_grid = {
   type = "car",
   name = "bio-processor-proxy-equipment-grid",
   equipment_grid = "bio-processor-equipment-grid",
+  hidden = true,
   minimap_representation = {
     filename = util.empty_sprite().filename,
     width = 1,
@@ -139,13 +140,13 @@ local bio_processor_proxy_equipment_grid = {
   consumption = "1W",
   rotation_speed = 1,
   rotation_snap_angle = 1,
-  energy_source = { type = "void" },
+  energy_source = {type = "void"},
   collision_mask = {
     layers = {},
   },
 }
 
-data.extend({
+data.extend {
   bio_processor_recipe_category,
   bio_processor_item,
   bio_processor_recipe,
@@ -154,6 +155,6 @@ data.extend({
   bio_processor_equipment_grid,
   bio_processor_equipment_category,
   bio_processor_proxy_equipment_grid,
-})
+}
 
 require("bio-processor-equipment")

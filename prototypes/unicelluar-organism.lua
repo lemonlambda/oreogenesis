@@ -1,6 +1,6 @@
 local organic_material_bio_processor_recipe = {
   type = "recipe",
-  name = "organic-material-bio_processor",
+  name = "organic-material-bio-processor",
   icon = "__base__/graphics/entity/accumulator/accumulator.png",
   category = "bio-processor",
   ingredients = {
@@ -25,7 +25,7 @@ local dna = {
   icon = "__base__/graphics/entity/accumulator/accumulator.png",
   icon_size = 128,
   stack_size = 50,
-  spoil_ticks = hour*2,
+  spoil_ticks = hour * 2,
   spoil_result = "dead-organic-material",
 }
 local simple_organelle_production_recipe = {
@@ -73,7 +73,7 @@ local ribosomes = {
   icon = "__oreogenesis__/graphics/icons/ribosome.png",
   icon_size = 128,
   stack_size = 50,
-  spoil_ticks = hour*2,
+  spoil_ticks = hour * 2,
   spoil_result = "dead-organic-material",
 }
 local nucleoid = {
@@ -82,7 +82,7 @@ local nucleoid = {
   icon = "__oreogenesis__/graphics/icons/nucleoid.png",
   icon_size = 128,
   stack_size = 50,
-  spoil_ticks = hour*2,
+  spoil_ticks = hour * 2,
   spoil_result = "dead-organic-material",
 }
 local cytoplasm = {
@@ -91,7 +91,7 @@ local cytoplasm = {
   icon = "__oreogenesis__/graphics/icons/cytoplasm.png",
   icon_size = 128,
   stack_size = 50,
-  spoil_ticks = hour*2,
+  spoil_ticks = hour * 2,
   spoil_result = "dead-organic-material",
 }
 local cell_membrane = {
@@ -100,7 +100,7 @@ local cell_membrane = {
   icon = "__oreogenesis__/graphics/icons/cell-membrane.png",
   icon_size = 128,
   stack_size = 50,
-  spoil_ticks = hour*2,
+  spoil_ticks = hour * 2,
   spoil_result = "dead-organic-material",
 }
 local peptidoglycan_layer = {
@@ -108,7 +108,7 @@ local peptidoglycan_layer = {
   name = "peptidoglycan_layer",
   icon = "__base__/graphics/entity/accumulator/accumulator.png",
   stack_size = 50,
-  spoil_ticks = hour*2,
+  spoil_ticks = hour * 2,
   spoil_result = "dead-organic-material",
 }
 
@@ -119,7 +119,7 @@ function new_unicelluar_organism_type(trait, additional_fields)
     icon = "__oreogenesis__/graphics/icons/simple-unicelluar-organism.png",
     icon_size = 128,
     stack_size = 50,
-    spoil_ticks = hour*2 or additional_fields.spoil_ticks,
+    spoil_ticks = hour * 2 or additional_fields.spoil_ticks,
     spoil_result = "dead-organic-material",
   }
 
@@ -165,20 +165,20 @@ function new_unicelluar_organism_type(trait, additional_fields)
     name = "simple-unicelluar-organism-" .. trait,
   }
 
-  data.extend{
+  data.extend {
     simple_unicelluar_organism,
     simple_unicelluar_organism_recipe,
     simple_unicelluar_organism_category,
   }
 end
 
-new_unicelluar_organism_type("blank", { additional_categories = { "bio-processor", }, })
-new_unicelluar_organism_type("broken", { spoil_ticks = minute*5, })
+new_unicelluar_organism_type("blank", {additional_categories = {"bio-processor",},})
+new_unicelluar_organism_type("broken", {spoil_ticks = minute * 5,})
 new_unicelluar_organism_type("iron-producing", {})
 new_unicelluar_organism_type("copper-producing", {})
 
 
-data.extend{
+data.extend {
   organic_material_bio_processor_recipe,
   simple_organelle_production_recipe,
 
