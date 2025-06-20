@@ -77,7 +77,6 @@ function new_bio_processor(trait, additional_fields)
       type = "electric",
       buffer_capacity = "500kJ",
       usage_priority = "secondary-input",
-      input_flow_limit = "400kW",
     },
     fluid_boxes = {
       {
