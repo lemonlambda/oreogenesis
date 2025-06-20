@@ -65,12 +65,7 @@ local research_relay = {
     amount = 1
   },
   inputs = {
-    "automation-science-pack",
-    "logistic-science-pack",
-    "military-science-pack",
-    "chemical-science-pack",
-    "utility-science-pack",
-    "space-science-pack"
+    "organic-processed-data",
   },
   allow_copy_paste = true,
   crafting_speed = 0.5,
