@@ -2,41 +2,41 @@ local analyzer = {
   type = "assembling-machine",
   name = "analyzer",
   icon = "__oreogenesis__/graphics/research-center/research-center-icon.png",
-  off_animation = {
-    layers = {
-      {
-        filename = "__oreogenesis__/graphics/research-center/research-center-hr-shadow.png",
-        size = {1000, 666},
-        draw_as_shadow = true,
+  graphics_set = {
+    animation = {
+      north = {
+        layers = {
+          {
+            filename = "__oreogenesis__/graphics/research-center/research-center-hr-shadow.png",
+            size = {1200, 700},
+            scale = 0.22,
+            draw_as_shadow = true,
+            repeat_count = 60,
+          },
+          {
+            stripes = {{
+              filename = "__oreogenesis__/graphics/research-center/research-center-emission1.png",
+              width_in_frames = 8,
+              height_in_frames = 8,
+            }},
+            size = { 500, 500 },
+            scale = 0.22,
+            draw_as_light = true,
+            frame_count = 60,
+          },
+          {
+            stripes = {{
+              filename = "__oreogenesis__/graphics/research-center/research-center-animation.png",
+              width_in_frames = 10,
+              height_in_frames = 8,
+            }},
+            size = { 590, 640 },
+            scale = 0.22,
+            frame_count = 60,
+          },
+        },
       },
-      {
-          filename = "__oreogenesis__/graphics/research-center/research-center-hr-emission-1.png",
-        size = { 530, 530 },
-        draw_as_light = true,
-      },
-      {
-        filename = "__oreogenesis__/graphics/research-center/research-center-hr-animation-1.png",
-        size = { 530, 530 },
-      },
-    }
-  },
-  on_animation = {
-    layers = {
-      {
-        filename = "__oreogenesis__/graphics/research-center/research-center-hr-shadow.png",
-        size = {1000, 666},
-        draw_as_shadow = true,
-      },
-      {
-          filename = "__oreogenesis__/graphics/research-center/research-center-hr-emission-1.png",
-        size = { 530, 530 },
-        draw_as_light = true,
-      },
-      {
-        filename = "__oreogenesis__/graphics/research-center/research-center-hr-animation-1.png",
-        size = { 530, 530 },
-      },
-    }
+    },
   },
   minable = {
     mining_time = 1,
@@ -53,10 +53,10 @@ local analyzer = {
     type = "void",
   },
   collision_box = {
-    {-3.5, -3.5}, {3.5, 7.5}
+    {-1.9, -1.9}, {1.9, 1.9}
   },
   selection_box = {
-    {-4, -4}, {4, 4}
+    {-2.2, -2.2}, {2.2, 2.2}
   },
   crafting_speed = 1.0,
 }
@@ -66,6 +66,7 @@ local analyzer_item = {
   name = "analyzer",
   icon = "__oreogenesis__/graphics/research-center/research-center-icon.png",
   stack_size = 50,
+  place_result = "analyzer",
 }
 
 local analyzer_recipe = {
