@@ -11,18 +11,7 @@ local analyzer = {
             size = {1200, 700},
             scale = 0.22,
             draw_as_shadow = true,
-            repeat_count = 60,
-          },
-          {
-            stripes = {{
-              filename = "__oreogenesis__/graphics/research-center/research-center-emission1.png",
-              width_in_frames = 8,
-              height_in_frames = 8,
-            }},
-            size = { 500, 500 },
-            scale = 0.22,
-            draw_as_light = true,
-            frame_count = 60,
+            repeat_count = 80,
           },
           {
             stripes = {{
@@ -32,7 +21,29 @@ local analyzer = {
             }},
             size = { 590, 640 },
             scale = 0.22,
-            frame_count = 60,
+            frame_count = 80,
+          },
+          {
+            stripes = {{
+              filename = "__oreogenesis__/graphics/research-center/research-center-emission1.png",
+              width_in_frames = 10,
+              height_in_frames = 8,
+            }},
+            size = { 590, 640 },
+            scale = 0.22,
+            draw_as_light = true,
+            frame_count = 80,
+          },
+          {
+            stripes = {{
+              filename = "__oreogenesis__/graphics/research-center/research-center-emission2.png",
+              width_in_frames = 10,
+              height_in_frames = 8,
+            }},
+            size = { 590, 640 },
+            scale = 0.22,
+            draw_as_light = true,
+            frame_count = 80,
           },
         },
       },
