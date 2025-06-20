@@ -1,4 +1,4 @@
-script.on_init(function ()
+script.on_init(function()
   remote.call("freeplay", "set_created_items", {})
   remote.call("freeplay", "set_respawn_items", {})
   remote.call("freeplay", "set_ship_items", {})
@@ -7,3 +7,4 @@ end)
 
 
 require("scripts.bio-processor")
+if settings.startup["tests"].value then require "tests.control" end

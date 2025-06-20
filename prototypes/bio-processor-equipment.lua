@@ -1,11 +1,12 @@
 function create_equipment(definition)
-  data:extend({
+  data:extend {
     {
       type = "item",
       name = definition.name,
       icon = definition.icon or "__base__/graphics/entity/accumulator/accumulator.png",
       stack_size = definition.stack_size or 10,
       place_as_equipment_result = definition.name,
+      hidden = definition.hidden,
     },
     {
       type = "battery-equipment",
@@ -22,6 +23,7 @@ function create_equipment(definition)
         usage_priority = "secondary-input",
         drain = "0kW",
       },
+      hidden = definition.hidden,
     },
     {
       type = "recipe",
@@ -34,11 +36,12 @@ function create_equipment(definition)
           amount = 1,
         },
       },
+      hidden = definition.hidden,
     }
-  })
+  }
 end
 
-create_equipment{
+create_equipment {
   name = "test-equipment",
   categories = {"bio-processor-equipment"},
   shape = {
@@ -46,9 +49,10 @@ create_equipment{
     height = 2,
     type = "full",
   },
+  hidden = true,
 }
 
-create_equipment{
+create_equipment {
   name = "fe3-reducer",
   categories = {"bio-processor-equipment"},
   shape = {
