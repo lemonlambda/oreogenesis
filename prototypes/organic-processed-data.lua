@@ -107,8 +107,62 @@ local organic_processed_data = {
 }
 
 -- First real way to make opd
-local opd_first = {
-  
+local analyze_simple_unicelluar_organism = {
+  type = "recipe",
+  name = "analyze-simple-unicelluar-organism",
+  icon = "__Krastorio2Assets__/icons/cards/matter-research-data.png",
+  category = "analyzer",
+  ingredients = {
+    {
+      type = "item",
+      name = "simple-unicelluar-organism-blank",
+      amount = 1,
+    },
+  },
+  results = {
+    {
+      type = "item",
+      name = "organic-processed-data",
+      amount = 1,
+      probability = 0.01,
+    },
+    {
+      type = "item",
+      name = "dead-organic-material",
+      amount = 1,
+      probability = 0.5,
+    },
+  },
+  energy_required = 1,
+}
+
+local analyze_simple_unicelluar_organism_iron_producing = {
+  type = "recipe",
+  name = "analyze-simple-unicelluar-organism-iron-producing",
+  icon = "__Krastorio2Assets__/icons/cards/matter-research-data.png",
+  category = "analyzer",
+  ingredients = {
+    {
+      type = "item",
+      name = "simple-unicelluar-organism-iron-producing",
+      amount = 1,
+    },
+  },
+  results = {
+    {
+      type = "item",
+      name = "organic-processed-data",
+      amount = 3,
+      probability = 0.03,
+    },
+    {
+      type = "item",
+      name = "dead-organic-material",
+      amount = 1,
+      probability = 0.5,
+    },
+  },
+  energy_required = 1,
 }
 
 data:extend{
@@ -117,5 +171,7 @@ data:extend{
   analyzer_recipe,
   analyzer_recipe_category,
   
-  organic_processed_data
+  organic_processed_data,
+  analyze_simple_unicelluar_organism,
+  analyze_simple_unicelluar_organism_iron_producing,
 }
