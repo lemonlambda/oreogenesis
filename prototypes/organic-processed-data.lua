@@ -59,9 +59,11 @@ local analyzer = {
   },
   allow_copy_paste = true,
   crafting_speed = 0.5,
-  energy_usage = "1000QW",
+  energy_usage = "1MW",
   energy_source = {
-    type = "void",
+    type = "electric",
+    buffer_capacity = "5MJ",
+    usage_priority = "secondary-input",
   },
   collision_box = {
     {-1.9, -1.9}, {1.9, 1.9}

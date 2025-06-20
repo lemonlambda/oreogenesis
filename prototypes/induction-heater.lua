@@ -8,9 +8,11 @@ induction_heater.mineable = {
 }
 induction_heater.crafting_categories = { "induction-heater" }
 induction_heater.crafting_speed = 0.5
-induction_heater.energy_usage = "1000QW"
+induction_heater.energy_usage = "300kW"
 induction_heater.energy_source = {
-  type = "void",
+  type = "electric",
+  buffer_capacity = "2MJ",
+  usage_priority = "secondary-input",
 }
 induction_heater.fluid_boxes = {
   {
