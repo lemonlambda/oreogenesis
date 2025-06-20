@@ -25,7 +25,13 @@ script.on_event(defines.events.on_string_translated, function(event)
         log("WARNING: localised string " .. serpent.block(event.localised_string) .. " is missing a translation")
         string_test_success = false
     end
-    if string_count == total_string_count then if string_test_success then log("localised strings test successful") end end
+    if string_count == total_string_count then
+        if string_test_success then
+            log("localised strings test successful")
+        else
+            error("some strings don't have a translation, check logs")
+        end
+    end
 end)
 
 script.on_nth_tick(1, function()
